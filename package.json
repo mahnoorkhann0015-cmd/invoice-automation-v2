@@ -1,0 +1,24 @@
+{
+  "name": "invoice-automation",
+  "version": "1.0.0",
+  "description": "Digital Invoice automation using Playwright + Cucumber BDD (JavaScript)",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js",
+    "test:login": "cucumber-js --tags @login",
+    "test:addInvoice": "cucumber-js --tags @addInvoice",
+    "test:postInvoice": "cucumber-js --tags @postInvoice",
+    "report": "node utils/generateReport.js",
+    "test:report": "npm test && npm run report"
+  },
+  "keywords": ["playwright", "cucumber", "bdd", "invoice", "automation"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.9.0",
+    "@playwright/test": "^1.47.0",
+    "playwright": "^1.47.0",
+    "cucumber-html-reporter": "^7.1.1",
+    "dotenv": "^16.4.5"
+  }
+}
